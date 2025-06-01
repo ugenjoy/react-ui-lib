@@ -1,6 +1,6 @@
 # React ui lib
 
-Template for react + tailwindcss ui library
+Template for react + shadcn (tailwind & radix) ui library
 
 ## Local developpement
 
