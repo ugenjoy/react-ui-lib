@@ -5,7 +5,7 @@ Template for react + tailwindcss ui library
 ## Local developpement
 
 The library and the projects which use it must be locally placed in a monorepo.
-The folder structure looks like that :
+The folder structure should looks like that :
 
 ```
 parent-folder/
@@ -15,4 +15,17 @@ parent-folder/
 │   └── my-super-app/
 ├── package.json
 └── package-lock.json
+```
+
+## package.json
+
+The package.json of the monorepo :
+
+```json
+{
+  "name": "react-ui-lib",
+  "workspaces": {
+    "packages": ["packages/*", "sites/*"]
+  }
+}
 ```
