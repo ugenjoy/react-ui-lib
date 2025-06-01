@@ -8,7 +8,11 @@ function MyButton({
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
   }) {
-  return <Button {...rest}>{children}</Button>
+  return (
+    <Button className="uikit:hover:cursor-pointer" {...rest}>
+      {children}
+    </Button>
+  )
 }
 
 export default MyButton
