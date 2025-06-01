@@ -13,8 +13,7 @@ parent-folder/
 │   ├── react-ui-lib/
 ├── sites/
 │   └── my-super-app/
-├── package.json
-└── package-lock.json
+└── package.json
 ```
 
 ## package.json
@@ -24,6 +23,7 @@ The package.json of the monorepo :
 ```json
 {
   "name": "react-ui-lib",
+  "private": true,
   "workspaces": {
     "packages": ["packages/*", "sites/*"]
   }
