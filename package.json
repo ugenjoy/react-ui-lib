@@ -7,14 +7,24 @@
     "dist"
   ],
   "typings": "./dist/index.d.ts",
-  "main": "./dist/ui-kit.umd.js",
+  "main": "./dist/ui-kit.cjs.js",
   "module": "./dist/ui-kit.es.js",
   "exports": {
+    "./forms": {
+      "types": "./dist/forms/index.d.ts",
+      "import": "./dist/forms/ui-kit.es.js",
+      "require": "./dist/forms/ui-kit.cjs.js"
+    },
+    "./nav": {
+      "types": "./dist/nav/index.d.ts",
+      "import": "./dist/nav/ui-kit.es.js",
+      "require": "./dist/nav/ui-kit.cjs.js"
+    },
     "./style.css": "./dist/ui-kit.css",
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/ui-kit.es.js",
-      "require": "./dist/ui-kit.umd.js"
+      "require": "./dist/ui-kit.cjs.js"
     }
   },
   "typesVersions": {
@@ -26,7 +36,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "build:watch": "vite build --watch",
     "lint": "eslint .",
     "preview": "vite preview"
   },

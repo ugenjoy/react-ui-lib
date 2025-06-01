@@ -16,10 +16,15 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: {
+        forms: resolve(__dirname, 'src/forms'),
+        nav: resolve(__dirname, 'src/nav'),
+        '': resolve(__dirname, 'src/index.ts'),
+      },
       name: 'ui-kit',
-      formats: ['es', 'umd'],
-      fileName: (format) => `ui-kit.${format}.js`,
+      formats: ['es', 'cjs'],
+      fileName: (format, entryName) =>
+        `${entryName ? entryName + '/' : ''}ui-kit.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
