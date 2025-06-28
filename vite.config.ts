@@ -24,6 +24,7 @@ export default defineConfig({
       entry: {
         forms: resolve(__dirname, 'src/forms'),
         nav: resolve(__dirname, 'src/nav'),
+        layouts: resolve(__dirname, 'src/layouts'),
         '': resolve(__dirname, 'src/index.ts'),
       },
       name: 'ui-kit',
