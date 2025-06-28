@@ -29,3 +29,31 @@ The package.json of the monorepo :
   }
 }
 ```
+
+The package.json of the app :
+
+```json
+{
+  "dependencies": {
+    "react-ui-lib": "*"
+  }
+}
+```
+
+## index.css of apps using the lib
+
+If we want to use custom variables from the lib, we must declare theses variable in the css of the app :
+
+```css
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  ...;
+}
+```
